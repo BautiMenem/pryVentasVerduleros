@@ -42,6 +42,7 @@
             // 
             // lstVendedor
             // 
+            this.lstVendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstVendedor.FormattingEnabled = true;
             this.lstVendedor.Location = new System.Drawing.Point(28, 94);
             this.lstVendedor.Name = "lstVendedor";
@@ -69,6 +70,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(28, 188);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(205, 20);
@@ -101,6 +103,7 @@
             // 
             // lstProducto
             // 
+            this.lstProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstProducto.FormattingEnabled = true;
             this.lstProducto.Location = new System.Drawing.Point(270, 94);
             this.lstProducto.Name = "lstProducto";

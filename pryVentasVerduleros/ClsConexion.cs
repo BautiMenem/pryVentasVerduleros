@@ -18,7 +18,7 @@ namespace pryVentasVerduleros
         OleDbDataReader rdrVendedor;
         OleDbDataReader rdrProducto;
         OleDbDataReader rdrVentas;
-        
+
 
         public void CargarDatos(ComboBox lstProducto, ComboBox lstVendedor)
         {
@@ -71,5 +71,41 @@ namespace pryVentasVerduleros
 
             }
         }
+
+
+        public void Insertardatos(string idVendedor, string idProduc, DateTime Fecha, string Kilos)
+        {
+            cmdVendedor.Connection = cnn;
+            cmdVendedor.CommandType = CommandType.TableDirect;
+            cmdVendedor.CommandText = "INSERT INTO Ventas([Cod Vendedor], [Cod Producto], Fecha, kilos) " +
+                "VALUES (" + idVendedor + " , " + idProduc + " , " + "`" +Fecha +"´" + ", "+ Kilos + ")";                      
+
+        }
+        
+        public void CargarDatos1(ComboBox lstVendedor)
+        {
+            string conexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=VERDULEROS.mdb;";
+            cnn = new OleDbConnection(conexion);
+            cmdVendedor = new OleDbCommand();
+            cmdVendedor.Connection = cnn;
+            cmdVendedor.CommandType = CommandType.TableDirect;
+            cmdVendedor.CommandText = "Vendedores";
+
+            rdrVendedor = cmdVendedor.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            lstVendedor.Items.Clear();
+
+            if (rdrVendedor.HasRows)
+            {
+                dt.Load(rdrVendedor);
+                lstVendedor.DataSource = dt;
+                lstVendedor.ValueMember = "IdVendedor";
+                lstVendedor.DisplayMember = "NombreVendedor";
+            }
+            
+            rdrVendedor.Close();
+        }
+    
     }
 }

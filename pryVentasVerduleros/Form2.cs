@@ -20,7 +20,7 @@ namespace pryVentasVerduleros
         private void Form2_Load(object sender, EventArgs e)
         {
             ClsConexion objClase = new ClsConexion();
-            objClase.CargarDatos(lstProducto, lstVendedor);
+            objClase.CargarDatos1(lstVendedor);
         }
 
         private void lstVendedor_SelectedIndexChanged(object sender, EventArgs e)
