@@ -31,7 +31,7 @@
             this.lstVendedor = new System.Windows.Forms.ComboBox();
             this.lblVendedor = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtKilos = new System.Windows.Forms.TextBox();
             this.lblkilos = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -68,13 +68,13 @@
             this.lblProducto.TabIndex = 3;
             this.lblProducto.Text = "Seleccione  Producto";
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(28, 188);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(205, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(28, 188);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(205, 20);
+            this.dtpFecha.TabIndex = 4;
             // 
             // txtKilos
             // 
@@ -88,9 +88,9 @@
             this.lblkilos.AutoSize = true;
             this.lblkilos.Location = new System.Drawing.Point(267, 154);
             this.lblkilos.Name = "lblkilos";
-            this.lblkilos.Size = new System.Drawing.Size(94, 13);
+            this.lblkilos.Size = new System.Drawing.Size(116, 13);
             this.lblkilos.TabIndex = 6;
-            this.lblkilos.Text = "Peso del Producto";
+            this.lblkilos.Text = "Peso del Producto (Kg)";
             // 
             // lblFecha
             // 
@@ -128,6 +128,7 @@
             this.btnCargar.TabIndex = 10;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // Form2
             // 
@@ -141,7 +142,7 @@
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblkilos);
             this.Controls.Add(this.txtKilos);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.lblVendedor);
             this.Controls.Add(this.lstVendedor);
@@ -158,7 +159,7 @@
         private System.Windows.Forms.ComboBox lstVendedor;
         private System.Windows.Forms.Label lblVendedor;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtKilos;
         private System.Windows.Forms.Label lblkilos;
         private System.Windows.Forms.Label lblFecha;
